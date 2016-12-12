@@ -1,4 +1,4 @@
-(ns produce-stand.core
+(ns fruit-cart.core
   (:gen-class))
 
 (defn -main
