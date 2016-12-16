@@ -7,11 +7,14 @@
   "A function that creates produce names."
   [& args]
   (println 
-    (reduce 
-      (fn [value category]
-        (str value (pick-one (parse-list category)) " "))
-      ""
-      ["sizes" "adjectives" "countries" "fruit"]
-  ))
+    (clojure.string/trim 
+      (reduce 
+        (fn [value category]
+          (str value (pick-one (parse-list category)) " "))
+        ""
+        ["sizes" "adjectives" "countries" "fruit"]
+      )
+    )
+  )
 )
 
