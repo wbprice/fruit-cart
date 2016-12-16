@@ -1,6 +1,7 @@
-(ns fruit-cart.fruit.fruit-list)
+(ns fruit-cart.fruit.fruit-list
+(use [fruit-cart.file.parse-list]))
 
-(defn fruits
-  "A vector of fruits"
+(defn fruit-list
+  "Fetches a vector of fruits from a file."
   []
-  (vector "Apple" "Orange" "Lemon" "Durian" "Watermelon" "Grapefruit" "Strawberry"))
+  (parse-list "fruit"))
