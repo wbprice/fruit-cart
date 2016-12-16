@@ -6,9 +6,12 @@
 (defn -main
   "A function that creates produce names."
   [& args]
-  (println (pick-one (parse-list "sizes"))
-           (pick-one (parse-list "countries"))
-           (pick-one (parse-list "adjectives"))
-           (pick-one (parse-list "fruit")))
+  (println 
+    (reduce 
+      (fn [value category]
+        (str value (pick-one (parse-list category)) " "))
+      ""
+      ["sizes" "adjectives" "countries" "fruit"]
+  ))
 )
 
